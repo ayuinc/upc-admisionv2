@@ -369,26 +369,25 @@ header li a:focus {
 
 
 #facultades{
-	background: url('../img/DSC_8227.jpg');
-	width: 100%;
-	background-size: cover;
-	background-position: center;
+  background: url('../img/DSC_8227.jpg');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .bg-opacity {
-	background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.9);
 }
 .facult{
-	color: #fff;
+  color: #fff;
   margin-left: 5%;
   font-family: 'sgothic-bdcap';
-  margin-bottom: 8%;
 }
 .bg-w{
   background: #fff;
     height: 158px;
 }
 .minh-140 {
-	height: 30px;
+  height: 30px;
 }
 .pd-2{
 padding: 4% 1% 0% 5%;
@@ -400,24 +399,24 @@ padding: 4% 1% 0% 5%;
     padding-bottom: 6%;
 }
 .pt-8{
-	padding-top: 6%;
+  padding-top: 6%;
 }
 
 .tabs h5{
-	margin-right: 37%;
-	text-align: center;
-	color: #fff;
-	text-decoration: none;
+  margin-right: 37%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
  font-family: 'zizou-slab-regular';
 }
 .content-wrap h4{
-	font-size: 14px;
-	color: #3C97FF;
+  font-size: 14px;
+  color: #3C97FF;
   font-family: 'zizou-slab-regular';
 
 }
 .content-wrap h3{
-	margin-left: 2%;
+  margin-left: 2%;
     margin-bottom: 0%;
     color: #0170B5;
     font-family: 'sgothic-bdcap';
@@ -427,7 +426,7 @@ padding: 4% 1% 0% 5%;
     font-size: 18px;
 }
 .content-wrap span{
-	color: #3C97FF;
+  color: #3C97FF;
 }
 .content-wrap hr{
     width: 11%;
@@ -437,243 +436,189 @@ padding: 4% 1% 0% 5%;
     margin-bottom: 0%;
 }
 
-.tabs-style-circle nav li a  .administracion {
-	background-image: url("../img/hover/admision5_15.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+
+/*epe*/
+
+.tabs-style-circle nav li a  .banca {
+  background-image: url("../img/botones-epe/epe-1.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
 }
 
-.tabs-style-circle nav li.tab-current a  .administracion {
-	background-image:url("../img/color/admision5_15.png");
-   background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li a  .arquitectura {
-	background-image:url("../img/hover/admision5_17.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .arquitectura {
-	background-image: url("../img/color/admision5_17.png");
+.tabs-style-circle nav li.tab-current a  .banca {
+  background-image:url("../img/botones-epe/epe-2.png");
     background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;  
-}
-
-.tabs-style-circle nav li a  .arte {
-	background-image: url("../img/hover/admision5_10.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .arte {
-	background-image:url("../img/color/admision5_10.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li a  .salud {
-	background-image: url("../img/hover/admision5_12.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .salud {
-	background-image:url("../img/color/admision5_12.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;  
-}
-
-.tabs-style-circle nav li a  .humano {
-	background-image: url("../img/hover/admision5_20.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative; 
-}
-
-.tabs-style-circle nav li.tab-current a  .humano {
-	background-image:url("../img/color/admision5_20.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;  
-}
-
-.tabs-style-circle nav li a  .comunicacion {
-	background-image: url("../img/hover/admision5_14.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .comunicacion {
-	background-image:url("../img/color/admision5_14.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li a  .derecho {
-	background-image: url("../img/hover/admision5_25.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;     
-}
-
-.tabs-style-circle nav li.tab-current a  .derecho {
-	background-image:url("../img/color/admision5_25.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-/* row-2*/
-
-.tabs-style-circle nav li a  .diseño {
-	background-image: url("../img/hover/admision5_35.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .diseño {
-	background-image:url("../img/color/admision5_35.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li a  .economia {
-	background-image: url("../img/hover/admision5_35-09.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .economia {
-	background-image:url("../img/color/admision5_35-09.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height:85px;
-    width: 85px;
-    position: relative; 
-}
-
-.tabs-style-circle nav li a  .educacion {
-	background-image: url("../img/hover/admision5_40.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .educacion {
-	background-image:url("../img/color/admision5_40.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
   
 }
 
-.tabs-style-circle nav li a  .ing {
-	background-image: url("../img/hover/admision5_35-11.png");
+.tabs-style-circle nav li a  .empresa {
+  background-image: url("../img/botones-epe/epe-3.png");
     background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
 }
 
-.tabs-style-circle nav li.tab-current a  .ing {
-	background-image:url("../img/color/admision5_35-11.png");
+.tabs-style-circle nav li.tab-current a  .empresa {
+  background-image:url("../img/botones-epe/epe-4.png");
     background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-  
-}
-
-.tabs-style-circle nav li a  .negocio {
-	background-image: url("../img/hover/admision5_45.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
-    width: 85px;
-    position: relative;
-}
-
-.tabs-style-circle nav li.tab-current a  .negocio {
-	background-image:url("../img/color/admision5_45.png");
-    background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
   
 }
 
-.tabs-style-circle nav li a  .psico {
-	background-image: url("../img/hover/admision5_47.png");
+.tabs-style-circle nav li a  .gerencia {
+  background-image: url("../img/botones-epe/epe-5.png");
     background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
 }
 
-.tabs-style-circle nav li.tab-current a  .psico {
-	background-image:url("../img/color/admision5_47.png");
+.tabs-style-circle nav li.tab-current a  .gerencia {
+  background-image:url("../img/botones-epe/epe-6.png");
     background-repeat: no-repeat;
-	background-size: cover;
-	height: 85px;
+  background-size: cover;
+  height: 85px;
     width: 85px;
     position: relative;
   
 }
 
+.tabs-style-circle nav li a  .contab {
+  background-image: url("../img/botones-epe/epe-7.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .contab {
+  background-image:url("../img/botones-epe/epe-8.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}
+.tabs-style-circle nav li a  .civil {
+  background-image: url("../img/botones-epe/epe-9.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .civil {
+  background-image:url("../img/botones-epe/epe-10.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}
+
+.tabs-style-circle nav li a  .industrial {
+  background-image: url("../img/botones-epe/epe-11.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .industrial {
+  background-image:url("../img/botones-epe/epe-12.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}
+.tabs-style-circle nav li a  .redes {
+  background-image: url("../img/botones-epe/epe-13.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .redes {
+  background-image:url("../img/botones-epe/epe-14.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}.tabs-style-circle nav li a  .sistemas {
+  background-image: url("../img/botones-epe/epe-15.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .sistemas {
+  background-image:url("../img/botones-epe/epe-16.png");
+    background-repeat: no-repeat;
+  background-size: cov../er;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}.tabs-style-circle nav li a  .marketing {
+  background-image: url("../img/botones-epe/epe-17.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .marketing{
+  background-image:url("../img/botones-epe/epe-18.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+  
+}.tabs-style-circle nav li a  .nnim {
+  background-image: url("../img/botones-epe/epe-19.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+.tabs-style-circle nav li.tab-current a  .nnim {
+  background-image:url("../img/botones-epe/epe-20.png");
+    background-repeat: no-repeat;
+  background-size: cover;
+  height: 85px;
+    width: 85px;
+}
+
+.mv-contain {
+  margin: 128px 0px;
+}

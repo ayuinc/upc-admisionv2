@@ -112,22 +112,28 @@ header li a:focus {
  	font-family: 'sgothic-bdcap';
  }
  .carreras h3{
- 	text-transform: uppercase;
- 	font-size: 42px;
- 	margin: 0;
- 	padding: 114px 0 6px 0 ;
- 	font-family: 'sgothic-bdcap';
+ 	  text-transform: uppercase;
+    font-size: 42px;
+    margin: 0;
+    padding: 125px 0 11px 0;
+    font-family: 'sgothic-bdcap';
  }
  .carreras img{
  	border-radius: 50%;
  	display: inline-block;
- 	width: 68%;
+ 	width: 87%;
  }
  .carreras h4{
- 	font-size:1.3em;
- 	font-family: 'zizou-slab-bold';
- 	font-weight: 900;
-    padding-top: 7px;
+ 	font-size: 1.4em;
+  font-family: 'zizou-slab-bold';
+  font-weight: 900;
+  padding-top: 7px;
+  letter-spacing: 1px;
+  margin-bottom: 84px;
+ }
+
+ .pl-full {
+      padding-left: 248px !important;
  }
 
 /*secccion campus*/
@@ -145,7 +151,7 @@ header li a:focus {
     padding: 0 4%;
 }
 .campus img{
-    width: 35%;
+    width: 49%;
     padding-bottom: 14px;
     padding-left: 10px;
     text-align: center;
@@ -166,30 +172,25 @@ header li a:focus {
  .campus p{
     position: absolute;
     font-family: 'zizou-slab-regular';
-    font-size:1.1em;
+    font-size:1.3em;
     font-weight: 900;
  }
  .sanisidro{
-    top: 7px;
-    left: 8px;
-  }
- .sanmiguel{
+    top: 39px;
     left: -3px;
-    bottom: 39px;
+ }
+ .sanmiguel{
+    left: -7px;
+    bottom: 36px;
  }
  .monterrico{
-    right: 158px;
-    top: 7px;
+    right:12px ;
+    top:39px;
  }
  .villa{
-    right: 195px;
-    bottom: 39px;
+    right: 50px;
+    bottom: 36px;
  }
-
- .contain-square {
-  margin-bottom: 30px;
- }
- 
 
 /*PORQUE UPC*/
 
@@ -208,6 +209,7 @@ header li a:focus {
   text-transform: uppercase;
   color: #0174DF;
  font-family: 'sgothic-bdcap';
+     margin-bottom: 21px;
 }
 .row .bg-white{
   background-color: white;
@@ -372,7 +374,7 @@ section{
 .content-wrap section {
   display: none;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1.5em;
   max-width: 1200px;
 }
 
@@ -415,6 +417,10 @@ section{
   .tabs nav a:before {
     margin-right: 0;
   }
+}
+
+.mt-35 {
+  margin-top: 35px !important;
 }
 
 /*****************************/
@@ -643,7 +649,7 @@ section{
 }
 
 .opacity .content-wrap section {
-  height: 232px;
+  height: 248px;
 }
 
 .text-sub {
