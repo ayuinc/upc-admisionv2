@@ -1,0 +1,1127 @@
+<krpano version="1.16" onstart="presentacion();" title="UPC SAN ISIDRO" showerrors="false" >
+<include url="escenas_skin.xml" />
+<action name="basico">
+	loadscene(c1, null, MERGE, BLEND(2));mapas_off();bloques_off();		
+</action>
+<preview type="grid(CUBE,1,1,1,0xFFFFFF,0xFFFFFF)" />
+	
+	<action name="presentacion">
+	action(hide_buttons_on);
+	set(layer[barra_derecha].visible,false);
+	tween(layer[show_buttons].alpha,0,0.1);
+	mapa_1_off();mapa_2_off();mapa_3_off();
+	info_off();
+	tween(layer[loading].alpha,0,0.1);
+	set(layer[logo_upc].visible,false);
+	set(layer[barra_superior].visible,false);
+	set(layer[buttons].visible,false);
+	tween(layer[presentacion_logo_upc].alpha,1,1);
+	set(layer[buttons].visible,false);
+	wait(4);
+	tween(layer[presentacion_logo_upc].alpha,0,1);
+	set(layer[buttons].visible,false);
+	wait(2);
+	tween(layer[texto_1_a].alpha,1,1);
+	tween(layer[texto_1_b].alpha,1,3);
+	tween(layer[texto_1_c].alpha,1,5);
+	wait(2);
+	tween(layer[texto_2_a].alpha,1,1);
+	tween(layer[texto_2_b].alpha,1,3);
+	tween(layer[texto_2_c].alpha,1,5);
+	wait(3);
+	tween(layer[texto_1_a].alpha,0,1);
+	tween(layer[texto_1_b].alpha,0,1);
+	tween(layer[texto_1_c].alpha,0,1);
+	tween(layer[texto_2_a].alpha,0,1);
+	tween(layer[texto_2_b].alpha,0,1);
+	tween(layer[texto_2_c].alpha,0,1);	
+
+	wait(1);
+	action(inicio_2);
+
+		</action>
+
+<action name="inicio_2">
+	tween(layer[loading].alpha,1,1);info_off();
+	tween(layer[show_buttons].alpha,0.8,1);
+	loadscene(a5, null, MERGE, BLEND(2));	
+	set(layer[barra_superior].visible,true);
+	set(layer[barra_inferior].visible,true);
+	set(layer[barra_inferior].alpha,1);
+	set(layer[barra_derecha].visible,true);		
+	set(layer[buttons].visible,true);
+	
+	set(layer[fondo_button_mapa].visible,true);	
+	set(layer[fondo_button_campus].visible,true);	
+	set(layer[fondo_button_servicios].visible,true);	
+	set(layer[fondo_button_break].visible,true);	
+	set(layer[fondo_button_estudio].visible,true);	
+	set(layer[logo_upc].visible,true);	
+	set(layer[logo_pt].visible,true);
+	action(hide_buttons_on);
+	tween(layer[fondo_trama].alpha,0,0.5);
+	mapas_off();
+	</action>			
+		
+	
+<style name="trama_style"  url="buttons/presentacion/trama_1.png" keep="true" align="lefttop" edge="lefttop" handcursor="false" alpha="0.8" enabled="false" scale="1"/>
+
+<layer name="fondo_trama" type="container" width="100%" height="100%" x="0" y="0" keep="true"  align="lefttop" edge="lefttop" handcursor="false" alpha="0.8" enabled="false">
+	
+	<layer name="fondo_trama_11" style="trama_style" y="0" x="0" />
+	<layer name="fondo_trama_12" style="trama_style" y="250" x="0" />
+	<layer name="fondo_trama_13" style="trama_style" y="500" x="0" />
+	<layer name="fondo_trama_14" style="trama_style" y="750" x="0" />
+	<layer name="fondo_trama_15" style="trama_style" y="1000" x="0" />
+	<layer name="fondo_trama_16" style="trama_style" y="1250" x="0" />
+	
+</layer>	
+	
+	<layer name="presentacion_logo_upc" url="buttons/presentacion/upc_logo.png" keep="true" scale="1" align="center" edge="center" handcursor="false" y="-50" alpha="0" enabled="false"/>		
+<layer name="texto_1_a" url="buttons/presentacion/texto_1.png" keep="true" crop="0|0|135|38" scale="1" align="center" edge="bottom" handcursor="false" x="-121" y="-90" alpha="0" enabled="false"/>	
+<layer name="texto_1_b" url="buttons/presentacion/texto_1.png" keep="true" crop="135|0|107|38" scale="1" align="center" edge="bottom" handcursor="false" x="0" y="-90" alpha="0" enabled="false"/>	
+<layer name="texto_1_c" url="buttons/presentacion/texto_1.png" keep="true" crop="242|0|106|38" scale="1" align="center" edge="bottom" handcursor="false" x="107" y="-90" alpha="0" enabled="false"/>
+	
+<layer name="texto_2_a" url="buttons/presentacion/texto_2.png" keep="true" crop="0|0|230|49" scale="1" align="center" edge="bottom" handcursor="false" x="-170" y="20" alpha="0" enabled="false"/>		
+<layer name="texto_2_b" url="buttons/presentacion/texto_2.png" keep="true" crop="230|0|137|49" scale="1" align="center" edge="bottom" handcursor="false" x="17" y="20" alpha="0" enabled="false"/>		
+<layer name="texto_2_c" url="buttons/presentacion/texto_2.png" keep="true" crop="367|0|158|49" scale="1" align="center" edge="bottom" handcursor="false" x="165" y="20" alpha="0" enabled="false"/>	
+	
+	
+<!-- Layers -->
+<action name="hide_barra_superior">
+tween(layer[barra_superior].alpha,0,0.3);
+</action>
+<action name="show_barra_superior">
+tween(layer[barra_superior].alpha,1,0.3);
+</action>
+
+<!-- <layer name="barra_superior" url="buttons/barra_arriba.png" align="topcenter" edge="topcenter" keep="true" x="0" y="0" width="100%"  handcursor="false" visible="true" zorder="0" onhover="action(show_barra_superior);" onout="action(hide_barra_superior);" >
+
+		<layer name="fondo_button_mapa" type="container" bgcolor="0xFFFFFF" keep="true" bgalpha="1" width="139" height="37" align="lefttop" edge="lefttop" x="0" y="-2" onhover="tween(alpha,0.4,0.3);" onout="tween(alpha,1,0.3);" onclick="mapa_1_on();">
+			<layer name="button_mapa" url="buttons/button_mapa.png" align="center" edge="center" x="0" y="0" onhover="tween(alpha,0.4,0.3);" onout="tween(alpha,1,0.3);" onclick="mapa_1_on();"/>
+		</layer>
+		
+		<layer name="barra_superior_trama" url="buttons/presentacion/trama_1.png" align="lefttop" edge="lefttop" crop="0|0|1950|37" handcursor="false" alpha="0.4" enabled="false"/>
+		
+</layer>
+
+<layer name="barra_inferior" url="filespano/barra_wikis.png" align="leftbottoml" edge="leftbottom" keep="true" x="0" y="0" width="100%" height="110" handcursor="false" visible="true" zorder="0" enabled="true" onhover="tween(alpha,1,0.3);" onout="tween(alpha,0,0.3);">
+	<layer name="barra_inferior_real" type="container" bgcolor="0xFFFFFF" bgalpha="0.1" align="bottomcenter" edge="bottomcenter" keep="true" x="0" y="0" width="100%" height="100" handcursor="false" visible="true" zorder="0" enabled="true" />
+	<layer name="barra_inferior_real_trama" url="buttons/presentacion/trama_1.png" align="leftbottom" edge="leftbottom" crop="0|0|1950|100" handcursor="false" alpha="0.65" enabled="false"/>
+</layer>
+
+ -->
+ 
+ <layer name="barra_nombres_muestras" url="filespano/barra_nombres_muestras.png" align="leftbottom" edge="leftbottom" keep="true" x="0" y="100" handcursor="false" zorder="0" enabled="false"  alpha="0" /> 
+ 
+<layer name="barra_superior" url="filespano/barra_titulo.png" align="righttop" edge="topcenter" keep="true" x="0" y="0" width="1200" height="37" handcursor="false" zorder="0" enabled="false"  alpha="0.8" />
+
+<layer name="barra_inferior" url="filespano/barra_wikis.png" align="leftbottom" edge="leftbottom" keep="true" x="-1" y="0" width="101%" height="150" handcursor="false" zorder="0" enabled="true" alpha="1" onhover="tween(y,0,0.3);set(textstyle[text_buttons].yoffset,180);" onout="tween(y,-100,0.3);set(textstyle[text_buttons].yoffset,80);" visible="false">
+	<layer name="barra_inferior_real" type="container" bgcolor="0x000000" bgalpha="0.5" align="bottomcenter" edge="bottomcenter" keep="true" x="0" y="0" width="100%" height="100" handcursor="false" visible="true" zorder="0" enabled="true" />
+	<layer name="barra_inferior_real_trama" url="buttons/presentacion/trama_1.png" align="leftbottom" edge="leftbottom" crop="0|0|1950|100" handcursor="false" alpha="0" enabled="false"/>
+</layer>	
+ 
+<layer name="barra_derecha" url="filespano/barra_wikis.png" align="righttop" edge="righttop" keep="true" x="-110" y="37" width="140" height="100%" handcursor="false" zorder="0" enabled="true"  alpha="1" maskchildren="true" >
+<layer name="buttons_mapas" type="container" bgcolor="0xFFFFFF" bgalpha="0" align="centerright" edge="centerright" keep="true" x="15" y="-30" width="85" height="80" handcursor="false" visible="true" zorder="4" enabled="true" >
+	<layer name="button_mapa" url="buttons/button_mapa_img.png" align="righttop" edge="righttop" x="0" y="0" onhover="tween(alpha,0.4,0.3);" onout="tween(alpha,1,0.3);" onclick="mapa_1_on();" zorder="4"/>
+	<layer name="button_campus" url="buttons/button_campus_img.png" align="righttop" edge="righttop" x="0" y="50" onhover="tween(alpha,0.4,0.3);" onout="tween(alpha,1,0.3);" onclick="mapa_2_on();" zorder="5"/>
+</layer>
+
+	<layer name="barra_derecha_real" type="container" bgcolor="0x000000" bgalpha="0.5" align="rightcenter" edge="rightcenter" keep="true" x="0" y="1" width="110" height="100%" handcursor="false" visible="true" zorder="0" enabled="true" />
+	<layer name="barra_derecha_real_trama" url="buttons/presentacion/trama_1.png" align="righttop" edge="center" crop="0|0|1950|220" handcursor="false" alpha="0" enabled="false" rotate="90"  parent="barra_derecha"/>
+</layer> 
+ 
+<layer name="abrir_menu" url="filespano/abrir_menu_fondo.png" y="-30" keep="true" align="leftcenter" width="30" height="100" parent="barra_derecha" onclick="action(abrir_derecha);" visible="true" zorder="4" alpha="0.5">
+	<layer name="abrir_menu_fondo" url="filespano/abrir_menu_texto.png" keep="true" x="0" y="0" align="leftcenter" handcursor="false" visible="true" zorder="0" enabled="true" onclick="action(abrir_derecha);" />
+</layer>
+
+<layer name="cerrar_menu" url="filespano/abrir_menu_fondo.png" y="-30" keep="true" align="leftcenter" width="30" height="100" parent="barra_derecha" onclick="action(cerrar_derecha);" visible="false" alpha="0.5">
+	<layer name="cerrar_menu_fondo" url="filespano/cerrar_menu_texto.png" keep="true" x="0" y="0" align="leftcenter" handcursor="false" visible="true" zorder="0" enabled="true" onclick="action(cerrar_derecha);"/>
+</layer> 
+ 
+<action name="abrir_derecha"> 
+tween(layer[barra_derecha].x,0,0.5);
+set(layer[cerrar_menu].visible,true);
+set(layer[abrir_menu].visible,false);
+</action> 
+
+<action name="cerrar_derecha">
+tween(layer[barra_derecha].x,-110,0.5);
+set(layer[cerrar_menu].visible,false);
+set(layer[abrir_menu].visible,true);
+</action> 
+ 
+<!-- Fin Layers -->
+<!-- 	<layer name="options" url="filespano/options.swf" keep="true" />
+	<layer name="editor" url="filespano/editor.swf" keep="true" align="topcenter" x="0" y="16" /> -->
+
+	
+<!-- Mapa Edificio -->
+<layer name="mapa_1_edificio" url="buttons/plano_base_3.png" align="center" edge="center" keep="true" x="0" y="-70" handcursor="false" visible="false" zorder="1" effect="glow(0xFFFFFF,0.7,8,2);"  onout="tooltips_off();" enabled="false">
+		<layer name="texto_close_1" url="filespano/x_3.png" align="righttop" x="3" y="3" scale="0.7" handcursor="true" enabled="true" onclick="mapa_1_off();tween(layer[fondo_trama].alpha,0,0.5);" zorder="3" onhover="set(effect,glow(0x000000,0.3,8,5));" onout="set(effect,0);" />
+
+		<layer name="textos_arriba" align="leftbottom" type="container" x="0" y="0" width="100%" height="35" zorder="5" onout="tooltips_off();">
+			<layer name="text_edificio" crop="0|0|53|33" align="lefttop" x="0" style="botones_mapa_1" handcursor="false" enabled="false" onover="tooltips_off();" />
+			<layer name="text_a" crop="48|0|28|33" align="lefttop" x="102" style="botones_mapa_1" onhover="set(layer[text_tooltip_a].visible,true);"  onclick="bloque_a_on();"/>
+			<layer name="text_b" crop="79|0|28|33" align="lefttop" x="132" style="botones_mapa_1" onhover="set(layer[text_tooltip_b].visible,true);" onclick="bloque_b_on();"/>
+			<layer name="text_c" crop="112|0|28|33" align="lefttop" x="162" style="botones_mapa_1" onhover="set(layer[text_tooltip_c].visible,true);" onclick="bloque_c_on();"/>
+			<layer name="text_d" crop="144|0|28|33" align="lefttop" x="192" style="botones_mapa_1" onhover="set(layer[text_tooltip_d].visible,true);" onclick="bloque_d_on();"/>
+			<layer name="text_e" crop="176|0|28|33" align="lefttop" x="222" style="botones_mapa_1" onhover="set(layer[text_tooltip_e].visible,true);" onclick="bloque_e_on();"/>
+			<layer name="text_f" crop="209|0|28|33" align="lefttop" x="252" style="botones_mapa_1" onhover="set(layer[text_tooltip_f].visible,true);" onclick="bloque_f_on();"/>
+			<layer name="text_g" crop="240|0|28|33" align="lefttop" x="282" style="botones_mapa_1" onhover="set(layer[text_tooltip_g].visible,true);" onclick="bloque_g_on();"/>
+			<layer name="text_ci" crop="496|0|149|33" align="lefttop" x="470" style="botones_mapa_1" onhover="set(layer[text_tooltip_ci].visible,true);" onclick="bloque_ci_on();"/>
+		</layer>
+
+<layer name="fondo_rojo" align="leftbottom" url="buttons/plano/franja_roja_fondo_4.png" x="0" handcursor="false" enabled="false" width="100%" />
+		
+		<layer name="puntos_negros_edificio" url="buttons/puntos_edificio.png" align="lefttop" x="0" y="0" handcursor="false"/>
+			<layer name="peque_mascara" url="buttons/miniaturas/mascara_edificio.png" x="0" y="0" zorder="2" visible="false" handcursor="false"/>
+			<layer name="peque_a" url="buttons/miniaturas/p_a.png" x="-33" y="24" style="peques"/>
+			<layer name="peque_b" url="buttons/miniaturas/p_b.png" x="-55" y="5" style="peques"/>
+			<layer name="peque_c" url="buttons/miniaturas/p_c.png" x="-67" y="-10" style="peques"/>
+			<layer name="peque_ci" url="buttons/miniaturas/p_ci.png" x="182" y="8" style="peques"/>
+			<layer name="peque_d" url="buttons/miniaturas/p_d.png" x="-56" y="-24" style="peques"/>
+			<layer name="peque_e" url="buttons/miniaturas/p_e.png" x="-65" y="-41" style="peques"/>
+			<layer name="peque_f" url="buttons/miniaturas/p_f.png" x="-58" y="-66" style="peques"/>		
+			<layer name="peque_g" url="buttons/miniaturas/p_g.png" x="-46" y="-89" style="peques" /> 
+			
+			<layer name="punto_peque_a" x="88" y="56" style="puntos_peques" onover="set(layer[text_a].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_a].visible,true);" onclick="bloque_a_on();"/>
+			<layer name="punto_peque_b" x="-175" y="30" style="puntos_peques" onover="set(layer[text_b].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_b].visible,true);" onclick="bloque_b_on();"/>
+			<layer name="punto_peque_c" x="-199" y="14" style="puntos_peques" onover="set(layer[text_c].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_c].visible,true);" onclick="bloque_c_on();"/>
+			<layer name="punto_peque_ci" x="178" y="-3" style="puntos_peques" onover="set(layer[text_ci].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_ci].visible,true);" onclick="bloque_ci_on();"/>
+			<layer name="punto_peque_d" x="-179" y="-8" style="puntos_peques" onover="set(layer[text_d].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_d].visible,true);" onclick="bloque_d_on();"/>
+			<layer name="punto_peque_e" x="-204" y="-26" style="puntos_peques" onover="set(layer[text_e].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_e].visible,true);" onclick="bloque_e_on();"/>
+			<layer name="punto_peque_f" x="-185" y="-49" style="puntos_peques" onover="set(layer[text_f].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_f].visible,true);" onclick="bloque_f_on();"/>	
+			<layer name="punto_peque_g" x="49" y="-92" style="puntos_peques" onover="set(layer[text_g].effect,glow(0x000000,0.3,8,5));set(layer[text_tooltip_g].visible,true);" onclick="bloque_g_on();"/> 
+	
+</layer>
+
+
+<action name="bloque_a_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_a].visible,true);
+set(layer[info_bloque_a].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_a].visible,true); );
+
+set(layer[muestras_a].visible,true);
+set(layer[muestra_a1].x,get(style[muestras].x_2));
+set(layer[muestra_a2].x,get(style[muestras].x_3));
+set(layer[muestra_a3].x,get(style[muestras].x_4));
+set(layer[muestra_a4].x,get(style[muestras].x_1));
+
+bloque_b_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_a_off">
+set(layer[peque_a].visible,false);
+set(layer[info_bloque_a].visible,false);
+set(layer[muestras_a].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_a].visible,false); );
+
+</action>
+
+<action name="bloque_b_on">
+action(hide_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_b].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_b].visible,true); );
+
+set(layer[muestras_b].visible,true);
+
+bloque_a_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_b_off">
+set(layer[peque_b].visible,false);
+set(layer[info_bloque_b].visible,false);
+set(layer[muestras_b].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_b].visible,false); );
+
+</action>
+
+<action name="bloque_c_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_c].visible,true);
+set(layer[info_bloque_c].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_c].visible,true); );
+
+set(layer[muestras_c].visible,true);
+set(layer[muestra_c1].x,get(style[muestras].x_1));
+
+bloque_a_off();
+bloque_b_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_c_off">
+set(layer[peque_c].visible,false);
+set(layer[info_bloque_c].visible,false);
+set(layer[muestras_c].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_c].visible,false); );
+
+</action>
+
+<action name="bloque_ci_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_ci].visible,true);
+set(layer[info_bloque_ci].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_ci].visible,true); );
+
+set(layer[muestras_ci].visible,true);
+set(layer[muestra_ci2].x,get(style[muestras].x_1));
+set(layer[muestra_ci3].x,get(style[muestras].x_2));
+
+bloque_a_off();
+bloque_b_off();
+bloque_c_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_ci_off">
+set(layer[peque_ci].visible,false);
+set(layer[info_bloque_ci].visible,false);
+set(layer[muestras_ci].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_ci].visible,false); );
+
+</action>
+
+<action name="bloque_d_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_d].visible,true);
+set(layer[info_bloque_d].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_d].visible,true); );
+
+set(layer[muestras_d].visible,true);
+set(layer[muestra_d1].x,get(style[muestras].x_1));
+
+bloque_a_off();
+bloque_b_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_d_off">
+set(layer[peque_d].visible,false);
+set(layer[info_bloque_d].visible,false);
+set(layer[muestras_d].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_d].visible,false); );
+
+</action>
+
+<action name="bloque_e_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_e].visible,true);
+set(layer[info_bloque_e].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_e].visible,true); );
+
+set(layer[muestras_e].visible,true);
+set(layer[muestra_e1].x,get(style[muestras].x_1));
+set(layer[muestra_e3].x,get(style[muestras].x_2));
+set(layer[muestra_e4].x,get(style[muestras].x_3));
+
+bloque_a_off();
+bloque_b_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="bloque_e_off">
+set(layer[peque_e].visible,false);
+set(layer[info_bloque_e].visible,false);
+set(layer[muestras_e].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_e].visible,false); );
+
+</action>
+
+<action name="bloque_f_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_f].visible,true);
+set(layer[info_bloque_f].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_f].visible,true); );
+
+set(layer[muestras_f].visible,true);
+set(layer[muestra_f1].x,get(style[muestras].x_1));
+
+bloque_a_off();
+bloque_b_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_g_off();
+</action>
+
+<action name="bloque_f_off">
+set(layer[peque_f].visible,false);
+set(layer[info_bloque_f].visible,false);
+set(layer[muestras_f].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_f].visible,false); );
+
+</action>
+
+<action name="bloque_g_on">
+action(show_buttons_on);
+tween(layer[barra_inferior].alpha,1,0.5);
+set(layer[peque_mascara].visible,true);
+set(layer[peque_g].visible,true);
+set(layer[info_bloque_g].visible,true);
+
+ifnot(device.flash, set(layer[text_tooltip_g].visible,true); );
+
+set(layer[muestras_g].visible,true);
+set(layer[muestra_g1].x,get(style[muestras].x_1));
+set(layer[muestra_g2].x,get(style[muestras].x_2));
+
+bloque_a_off();
+bloque_b_off();
+bloque_c_off(); 
+bloque_ci_off(); 
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+</action>
+
+<action name="bloque_g_off">
+set(layer[peque_g].visible,false);
+set(layer[info_bloque_g].visible,false);
+set(layer[muestras_g].visible,false);
+
+ifnot(device.flash, set(layer[text_tooltip_g].visible,false); );
+
+</action>
+
+<action name="bloques_off">
+bloque_a_off();
+bloque_b_off();
+bloque_c_off();
+bloque_ci_off();  
+bloque_d_off();
+bloque_e_off();	
+bloque_f_off();
+bloque_g_off();
+</action>
+
+<action name="peques_off">
+set(layer[peque_a].visible,false);
+set(layer[peque_b].visible,false);
+set(layer[peque_c].visible,false);
+set(layer[peque_ci].visible,false);
+set(layer[peque_d].visible,false);
+set(layer[peque_e].visible,false);
+set(layer[peque_f].visible,false);
+set(layer[peque_g].visible,false);
+</action>
+
+<action name="tooltips_off">
+set(layer[text_tooltip_a].visible,false);
+set(layer[text_tooltip_b].visible,false);
+set(layer[text_tooltip_c].visible,false);
+set(layer[text_tooltip_d].visible,false);
+set(layer[text_tooltip_e].visible,false);
+set(layer[text_tooltip_f].visible,false);
+set(layer[text_tooltip_g].visible,false);
+set(layer[text_tooltip_ci].visible,false);
+</action>
+
+
+		<style name="botones_mapa_1" visible="true" url="buttons/plano/franja_roja_mapa_4.png" handcursor="true" zorder="3" onover="set(effect,glow(0x000000,0.3,8,5));" onout="set(effect,0);tooltips_off();" />
+		<style name="peques" visible="false" handcursor="false" zorder="4" alpha="1" align="center" effect="glow(0xffffff,0.9,8,10);" />
+		<style name="puntos_peques" url="buttons/punto_solo.png" visible="true" handcursor="true" zorder="15" alpha="0" align="center" onout="efectos_textos_off();tooltips_off();" />
+		<style name="info_bloques" visible="false" handcursor="true" keep="true" zorder="15" alpha="0.8" align="leftbottom" y="13" x_1="10" x_2="179" x_3="255" x_4="331" x_5="407" x_6="483" x_7="559" effect="glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,3,1);" parent="barra_inferior" />
+		<style name="muestras" visible="true" handcursor="true" keep="true" zorder="15" alpha="0.9" align="leftbottom" y="10" x_1="10" x_2="140" x_3="270" x_4="400" x_5="530" x_6="660" x_7="790" effect="glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,3,1);" onover="set(effect,glow(0xFFFFFF,0.7,10,8));tween(layer[barra_nombres_muestras].alpha,0.9,0.1);" onout="set(effect,glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,3,1););tween(layer[barra_nombres_muestras].alpha,0,0.1);"/>
+
+<layer name="info_bloque_a" url="buttons/info/info_bloque_a.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+<layer name="info_bloque_b" url="buttons/info/info_bloque_b.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+<layer name="info_bloque_c" url="buttons/info/info_bloque_c.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+<layer name="info_bloque_ci" url="buttons/info/info_bloque_ci.png" x="10" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_ci" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_ci" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="270" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_ci2" url="muestras/ci2.png" style="muestras" onhover="showtext(get(data[text_muestras_ci2].content),stylealt_muestras);" onclick="loadscene(ci2, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_ci3" url="muestras/ci3.png" style="muestras" onhover="showtext(get(data[text_muestras_ci3].content),stylealt_muestras);" onclick="loadscene(ci3, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+
+<layer name="info_bloque_a" url="buttons/info/info_bloque_a.png" x="18" style="info_bloques" handcursor="false" enabled="false" /> 
+
+	<layer name="muestras_a" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_a" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="530" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_a1" url="muestras/a1.png" style="muestras" onhover="showtext(get(data[text_muestras_a1].content),stylealt_muestras);" onclick="loadscene(a1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_a2" url="muestras/a2.png" style="muestras" onhover="showtext(get(data[text_muestras_a2].content),stylealt_muestras);" onclick="loadscene(a2, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_a3" url="muestras/a3.png" style="muestras" onhover="showtext(get(data[text_muestras_a3].content),stylealt_muestras);" onclick="loadscene(a3, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_a4" url="muestras/a4.png" style="muestras" onhover="showtext(get(data[text_muestras_a4].content),stylealt_muestras);" onclick="loadscene(a4, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+
+<layer name="info_bloque_b" url="buttons/info/info_bloque_b.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+<layer name="info_bloque_c" url="buttons/info/info_bloque_c.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_c" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_c" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="140" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_c1" url="muestras/c1.png" style="muestras" onhover="showtext(get(data[text_muestras_c1].content),stylealt_muestras);" onclick="loadscene(c1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+
+<layer name="info_bloque_d" url="buttons/info/info_bloque_d.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_d" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_d" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="140" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_d1" url="muestras/d1.png" style="muestras" onhover="showtext(get(data[text_muestras_d1].content),stylealt_muestras);" onclick="loadscene(d1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+
+<layer name="info_bloque_e" url="buttons/info/info_bloque_e.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_e" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_e" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="400" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_e1" url="muestras/e1.png" style="muestras" onhover="showtext(get(data[text_muestras_e1].content),stylealt_muestras);" onclick="loadscene(e1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_e3" url="muestras/e3.png" style="muestras" onhover="showtext(get(data[text_muestras_e3].content),stylealt_muestras);" onclick="loadscene(e3, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_e4" url="muestras/e4.png" style="muestras" onhover="showtext(get(data[text_muestras_e4].content),stylealt_muestras);" onclick="loadscene(e4, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+
+<layer name="info_bloque_f" url="buttons/info/info_bloque_f.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_f" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_f" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="140" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_f1" url="muestras/f1.png" style="muestras" onhover="showtext(get(data[text_muestras_f1].content),stylealt_muestras);" onclick="loadscene(f1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+	
+<layer name="info_bloque_g" url="buttons/info/info_bloque_g.png" x="18" style="info_bloques" handcursor="false" enabled="false"/> 
+
+	<layer name="muestras_g" x="110" y="5" zorder="3" type="container" visible="false" align="leftbottom" width="70%" height="90" bgcolor="0x000000" bgalpha="0" keep="true" parent="barra_inferior" >
+		<layer name="scroll_g" url="filespano/scrollarea.swf" alturl="filespano/scrollarea.js" onhover_autoscrolling="true" zorder="4" y="5" align="left" width="270" height="90" direction="h" onloaded="setcenter(0,0);">
+			<layer name="muestra_g1" url="muestras/g1.png" style="muestras" onhover="showtext(get(data[text_muestras_g1].content),stylealt_muestras);" onclick="loadscene(g1, null, MERGE, BLEND(0.5));mapas_off();" /> 
+			<layer name="muestra_g2" url="muestras/g2.png" style="muestras" onhover="showtext(get(data[text_muestras_g2].content),stylealt_muestras);" onclick="loadscene(g2, null, MERGE, BLEND(0.5));mapas_off();" /> 
+		</layer>
+	</layer>
+	
+
+<data name="peque_a_text">[p]PRINCIPALES AMBIENTES:A
+[br][br]Recepci&#xf3;n EPG
+[br]Secretar&#xed;a Acad&#xe9;mica EPG
+[br]Caja y Cobranza
+[br]Auditorio
+[br]Admisi&#xf3;n Pregrado
+[br]Salas de Entrevistas  N° 1 y Nº 2
+[br]Centro de Atencion al Alumno - Pregrado
+[br]Registros Acad&#xe9;micos 
+[br]Oficina de Aulas y Laboratorios 
+[br]Oficina de Cr&#xe9;dito Educativo 
+[br]T&#xf3;pico 
+[br]Aulas 101,103,104
+[br][br]SERVICIOS UNIVERSITARIOS:
+[br]Oficina Internacional
+[br]Oportunidades Laborales y
+[br]Vida Universitaria
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_b_text">[p]PRINCIPALES AMBIENTES:B
+[br][br]Sala de C&#xf3;mputo
+[br]Sala de Estar
+[br]Aulas 201 - 209[/p]</data>
+
+<data name="peque_c_text">[p]PRINCIPALES AMBIENTES:C
+[br][br]Centro de Informaci&#xf3;n Pregrado
+[br]Aulas 301 - 309
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_ci_text">[p]PRINCIPALES AMBIENTES:CI
+[br][br]Sal&#xf3;n de C&#xf3;mputo
+[br]Sala de Lectura
+[br]Cub&#xed;culos
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_d_text">[p]PRINCIPALES AMBIENTES:D
+[br][br]Calidad Educativa
+[br]Cafeter&#xed;a
+[br]Aulas 401 - 412
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_e_text">[p]PRINCIPALES AMBIENTES:E
+[br][br]Oficina de Operaciones
+[br]Sala de Servicios Generales
+[br]Sala de Estudio
+[br]Terraza
+[br]Aulas 501 - 512
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_f_text">[p]PRINCIPALES AMBIENTES:F
+[br][br]Club de C&#xe1;tedra
+[br]Snack D'Gusta
+[br]Sala MAC
+[br]Aulas 601 - 615
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<data name="peque_g_text">[p]PRINCIPAL AMBIENTE:G
+[br][br] Director Ejecutivo de Campus
+[br]Director Acad&#xe9;mico de Campus
+[br]Direcci&#xf3;n de Gesti&#xf3;n Educativa y Pedag&#xf3;gica
+[br]Gerencia de Operaciones y Servicios
+[br]Aulas 701 - 715
+[br]Sala de Tutor&#xed;as
+[br]Oficinas de Facultades - Atenci&#xf3;n al Alumno
+[br]Sala de Reuniones
+[br]Sala Bloomberg
+[br][br]VEA SUS PANORAMAS EN LA BARRA INFERIOR[/p]</data>
+
+<layer name="text_tooltip_a" url="buttons/plano/tooltip_a.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_b" url="buttons/plano/tooltip_b.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_c" url="buttons/plano/tooltip_c.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_d" url="buttons/plano/tooltip_d.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_e" url="buttons/plano/tooltip_e.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_f" url="buttons/plano/tooltip_f.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_g" url="buttons/plano/tooltip_g.png" style="peque_text_tooltip" />
+<layer name="text_tooltip_ci" url="buttons/plano/tooltip_ci.png" style="peque_text_tooltip" />
+
+<style name="peque_text_tooltip" y="0" align="leftbottom" edge="lefttop" keep="true" handcursor="false" enabled="true" alpha="0.7" visible="false" zorder="14" parent="mapa_1_edificio" effect="glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,3,1);"/>	
+
+<action name="efectos_textos_off">
+set(layer[text_a].effect,0);
+set(layer[text_b].effect,0);
+set(layer[text_c].effect,0);
+set(layer[text_d].effect,0);
+set(layer[text_e].effect,0);
+set(layer[text_f].effect,0);
+set(layer[text_g].effect,0);
+set(layer[text_ci].effect,0);
+</action>	
+	
+		<action name="draglayer">
+		if(%1 != dragging,
+			copy(drag_currentx, x);
+			copy(drag_currenty, y);
+			copy(drag_stagex, mouse.stagex);
+			copy(drag_stagey, mouse.stagey);
+			set(drag_sx, +1);
+			set(drag_sy, +1);
+			if(align == righttop,    set(drag_sx,-1); );
+			if(align == right,       set(drag_sx,-1); );
+			if(align == rightbottom, set(drag_sx,-1); set(drag_sy,-1); );
+			if(align == bottom,      set(drag_sy,-1); );
+			if(align == leftbottom,  set(drag_sy,-1); );
+			draglayer(dragging);
+		  ,
+			if(pressed,
+				sub(dx, mouse.stagex, drag_stagex);
+				sub(dy, mouse.stagey, drag_stagey);
+				mul(dx, drag_sx);
+				mul(dy, drag_sy);
+				add(x, drag_currentx, dx);
+				add(y, drag_currenty, dy);
+				delayedcall(0, draglayer(dragging) );
+			  );
+		  );
+	</action>	
+		
+<!-- Mapa Edificio Fin -->
+
+<!-- Mapa Campus -->
+
+<layer name="mapa_2_campus" url="buttons/plano_base_3.png" align="center" edge="center" keep="true" x="0" y="-60" handcursor="false" visible="false" zorder="1" effect="glow(0xFFFFFF,0.7,8,2);">
+			<layer name="texto_campus"  url="buttons/plano/franja_roja_campus.png" align="leftbottom" x="0" zorder="2" enabled="false"/>			
+			<layer name="franja_campus" url="buttons/plano/franja_roja_fondo_4.png" align="leftbottom" x="0" enabled="false" width="100%" />
+			<layer name="puntos_negros_campus" url="buttons/puntos_campus_3.png" align="lefttop" x="0" y="0" zorder="1" handcursor="false"/>
+			<layer name="punto_campus_1" x="40" y="86" style="puntos_campus" onhover="showtext(get(data[text_ambientes_a5].content),stylealt_mapas);" onclick="loadscene(a5, null, MERGE, BLEND(0.5));mapas_off();action(hide_buttons_on);"  />
+			<layer name="punto_campus_2" x="160" y="-30" style="puntos_campus" onhover="showtext(get(data[text_ambientes_a6].content),stylealt_mapas);" onclick="loadscene(a6, null, MERGE, BLEND(0.5));mapas_off();action(hide_buttons_on);"  />
+			<layer name="punto_campus_3" x="123" y="-60" style="puntos_campus" onhover="showtext(get(data[text_ambientes_a7].content),stylealt_mapas);" onclick="loadscene(a7, null, MERGE, BLEND(0.5));mapas_off();action(hide_buttons_on);"  />
+			
+		<layer name="texto_close_2" url="filespano/x_3.png" align="righttop" x="0" zorder="4" scale="0.7" onclick="mapa_2_off();action(hide_buttons_on);tween(layer[fondo_trama].alpha,0,0.5);" onhover="set(effect,glow(0x000000,0.3,8,5));" onout="set(effect,0);"/>		
+			
+</layer>
+
+	<layer name="punto_info_2" url="filespano/encendido_0.png" align="leftbottom" edge="center" x="403" y="17" keep="true" zorder="5" crop="0|0|64|64" framewidth="64" frameheight="64" frame="0" lastframe="19" onloaded="hotspot_animate_vertical();" effect="glow(0x000000,0.7,8,2);" scale="0.3" alpha="1.1" enabled="false" handcursor="false" parent="mapa_2_campus" />
+
+	<style name="puntos_campus" visible="true" url="filespano/encendido_0.png" edge="center" align="center" crop="0|0|64|64" framewidth="64" frameheight="64" frame="0" lastframe="19" onloaded="hotspot_animate_vertical();" effect="glow(0x000000,0.7,8,2);" scale="0.3" handcursor="true" zorder="5" alpha="1.1" />	
+		
+	<action name="hotspot_animate_self">
+		inc(scale,get(scale_incremento),get(scale_max),get(scale_min));
+		delayedcall(0.03, if(loaded, hotspot_animate_self() ) );
+	</action>
+	
+	<style name="hotspot_puntosblancos" url="filespano/puntos_blancos.png" crop="0|0|64|64" framewidth="64" frameheight="64" frame="0" lastframe="19" onloaded="hotspot_animate_vertical();" effect="glow(0x000000,0.7,8,2);" scale="0.7" zorder="-1"/>	
+
+	<action name="hotspot_animate_vertical">		
+		inc(frame,1,get(lastframe),0);
+		mul(ypos,frame,frameheight);
+		txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+		delayedcall(0.03, if(loaded, hotspot_animate_vertical()));   
+	</action>
+	
+<data name="campus_1_text">[p]Campus 1[/p]</data> 
+<data name="campus_2_text">[p]Campus 2[/p]</data> 
+<data name="campus_3_text">[p]Campus 3[/p]</data> 
+<data name="campus_4_text">[p]Campus 4[/p]</data> 
+<data name="campus_5_text">[p]Campus 5[/p]</data> 
+<data name="campus_6_text">[p]Campus 6[/p]</data> 
+<data name="campus_7_text">[p]Campus 7[/p]</data> 
+<data name="campus_8_text">[p]Campus 8[/p]</data> 
+<data name="campus_9_text">[p]Campus 9[/p]</data> 
+<data name="campus_10_text">[p]Campus 10[/p]</data>	
+<data name="campus_11_text">[p]Campus 11[/p]</data>	
+<data name="campus_12_text">[p]Campus 12[/p]</data>	
+<data name="campus_13_text">[p]Campus 13[/p]</data>	
+<data name="campus_14_text">[p]Campus 14[/p]</data>	
+<data name="campus_15_text">[p]Campus 15[/p]</data>	
+<data name="campus_16_text">[p]Campus 16[/p]</data>	
+<data name="campus_17_text">[p]Campus 17[/p]</data>	
+<data name="campus_18_text">[p]Campus 18[/p]</data>	
+<data name="campus_19_text">[p]Campus 19[/p]</data>	
+<data name="campus_20_text">[p]Campus 20[/p]</data>	
+	
+<!-- Mapa Campus Fin -->
+
+<!-- Mapa Servicios -->
+
+<!-- <layer name="mapa_3_servicios" url="buttons/plano_base.png" align="center" edge="center" keep="true" x="0" y="-60" handcursor="false" visible="false" zorder="1" effect="glow(0xFFFFFF,0.7,8,2);">
+		<layer name="texto_servicios" url="buttons/texto_servicios.png" align="lefttop" x="15" />
+		<layer name="puntos_servicios" url="buttons/puntos_servicios.png" align="lefttop" x="0" y="0" zorder="1" handcursor="false"/>
+		<layer name="texto_close_3" url="filespano/x.png" align="righttop" x="0" zorder="4" scale="0.95" onclick="mapa_3_off();tween(layer[barra_inferior].alpha,0,0.5);"/>			
+</layer> -->
+
+<!-- Mapa Servicios Fin -->
+
+	<action name="mapa_1_on">
+		set(layer[mapa_1_edificio].visible,true);
+		set(layer[mapa_1_edificio].enabled,true);
+		set(layer[mapa_1_edificio].x,-100%);
+		tween(layer[mapa_1_edificio].alpha,1,1);
+		tween(layer[mapa_1_edificio].x,0,0.5);
+		set(layer[mapa_2_campus].visible,false);
+		set(layer[mapa_3_servicios].visible,false);
+		mapa_2_off();
+		mapa_3_off();
+		action(cerrar_derecha);
+		
+set(layer[text_tooltip_a].x,get(layer[text_a].x));
+set(layer[text_tooltip_b].x,get(layer[text_b].x));
+set(layer[text_tooltip_c].x,get(layer[text_c].x));
+set(layer[text_tooltip_d].x,get(layer[text_d].x));
+set(layer[text_tooltip_e].x,get(layer[text_e].x));
+set(layer[text_tooltip_f].x,get(layer[text_f].x));
+set(layer[text_tooltip_g].x,get(layer[text_g].x));
+set(layer[text_tooltip_h].x,get(layer[text_h].x));
+set(layer[text_tooltip_j].x,get(layer[text_j].x));
+set(layer[text_tooltip_k].x,get(layer[text_k].x));
+set(layer[text_tooltip_l].x,get(layer[text_l].x));
+set(layer[text_tooltip_ci].x,get(layer[text_ci].x));
+				
+		info_off();
+		
+		set(layer[fondo_button_mapa].onclick,mapa_1_off();tween(layer[fondo_trama].alpha,0,0.5););
+		set(layer[button_mapa].onclick,mapa_1_off();tween(layer[fondo_trama].alpha,0,0.5););
+	</action>
+
+	<action name="mapa_1_off">
+		tween(layer[mapa_1_edificio].x,100%,1);
+		tween(layer[mapa_1_edificio].alpha,0,0.5);
+		set(layer[mapa_1_edificio].enabled,false);
+		set(layer[peque_mascara].visible,false);
+		peques_off();
+		tooltips_off();
+		
+		set(layer[fondo_button_mapa].onclick,mapa_1_on());
+		set(layer[button_mapa].onclick,mapa_1_on());
+	</action>
+
+	<action name="mapa_2_on">
+		hide_alpha(buttons);
+		action(hide_buttons_on);	
+		set(layer[mapa_1_edificio].visible,false);
+		set(layer[mapa_2_campus].visible,true);
+		set(layer[mapa_2_campus].enabled,true);
+		set(layer[mapa_2_campus].x,-100%);
+		tween(layer[mapa_2_campus].alpha,1,1);
+		tween(layer[mapa_2_campus].x,0,0.5);
+		set(layer[mapa_3_servicios].visible,false);
+		set(layer[info_mapa_2].visible,true);
+		set(layer[leyenda_mapa_2].visible,true);
+		set(layer[punto_info_2].visible,true);
+		mapa_1_off();
+		mapa_3_off();
+		bloques_off();
+		action(cerrar_derecha);
+		
+		info_off();
+		
+		set(layer[fondo_button_campus].onclick,mapa_2_off();tween(layer[fondo_trama].alpha,0,0.5);action(hide_buttons_on););
+		set(layer[button_campus].onclick,mapa_2_off();tween(layer[fondo_trama].alpha,0,0.5);action(hide_buttons_on););
+	</action>
+
+	<action name="mapa_2_off">
+		tween(layer[mapa_2_campus].x,100%,1);
+		tween(layer[mapa_2_campus].alpha,0,0.5);
+		set(layer[mapa_2_campus].enabled,false);
+		set(layer[info_mapa_2].visible,false);
+		set(layer[leyenda_mapa_2].visible,false);
+		set(layer[punto_info_2].visible,false);
+		
+		set(layer[fondo_button_campus].onclick,mapa_2_on());
+		set(layer[button_campus].onclick,mapa_2_on());			
+	</action>
+	
+	<action name="mapa_3_on">
+		hide_alpha(buttons);
+		action(hide_buttons_on);
+		set(layer[mapa_1_edificio].visible,false);
+		set(layer[mapa_2_campus].visible,false);
+		set(layer[mapa_3_servicios].visible,true);
+		set(layer[mapa_3_servicios].enabled,true);
+		set(layer[mapa_3_servicios].x,-100%);
+		tween(layer[mapa_3_servicios].alpha,1,1);
+		tween(layer[mapa_3_servicios].x,0,0.5);
+		set(layer[info_mapa_3].visible,true);
+		set(layer[leyenda_mapa_3].visible,true);
+		mapa_1_off();
+		mapa_2_off();
+		bloques_off();
+		action(cerrar_derecha);
+		
+		info_off();
+		
+		set(layer[fondo_button_servicios].onclick,mapa_3_off();tween(layer[fondo_trama].alpha,0,0.5);action(hide_buttons_on););
+		set(layer[button_servicios].onclick,mapa_3_off();tween(layer[fondo_trama].alpha,0,0.5);action(hide_buttons_on););
+	</action>
+
+	<action name="mapa_3_off">
+		tween(layer[mapa_3_servicios].x,100%,1);
+		tween(layer[mapa_3_servicios].alpha,0,0.5);
+		set(layer[mapa_3_servicios].enabled,false);
+		set(layer[info_mapa_3].visible,false);
+		set(layer[leyenda_mapa_3].visible,false);
+		
+		set(layer[fondo_button_servicios].onclick,mapa_3_on());
+		set(layer[button_servicios].onclick,mapa_3_on());
+	</action>	
+
+
+<data name="text_ambientes_a1">[p]AUDITORIO[/p]</data>
+<data name="text_ambientes_a2">[p]HALL DEL AUDITORIO[/p]</data>
+<data name="text_ambientes_a3">[p]TERRAZA DEL AUDITORIO[/p]</data>
+<data name="text_ambientes_a4">[p]HALL DE INGRESO[/p]</data>
+<data name="text_ambientes_a5">[p]FRONTIS SALAVERRY[/p]</data>
+<data name="text_ambientes_a6">[p]PLAZUELA 1[/p]</data>
+<data name="text_ambientes_a7">[p]PLAZUELA 2[/p]</data>
+
+<data name="text_ambientes_c1">[p]CENTRO DE INFORMACI&#xd3;N[/p]</data>
+
+<data name="text_ambientes_d1">[p]CAFETER&#xcd;A[/p]</data>
+
+<data name="text_ambientes_e1">[p]TERRAZA[/p]</data>
+<data name="text_ambientes_e2">[p]AULA COM&#xda;N[/p]</data>
+<data name="text_ambientes_e3">[p]AULA[/p]</data>
+<data name="text_ambientes_e4">[p]&#xc1;REA LIBRE[/p]</data>
+
+<data name="text_ambientes_f1">[p]LABORATORIO MAC[/p]</data>
+
+<data name="text_ambientes_g1">[p]SALA BLOOMBERG[/p]</data>
+<data name="text_ambientes_g2">[p]SALA DE TUTOR&#xcd;A[/p]</data>
+
+<data name="text_ambientes_ci1">[p]SAL&#xd3;N DE C&#xd3;MPUTO[/p]</data>
+<data name="text_ambientes_ci2">[p]SALA DE LECTURA[/p]</data>
+<data name="text_ambientes_ci3">[p]CUB&#xcd;CULOS[/p]</data>
+
+
+
+<data name="text_muestras_a1">[p]AUDITORIO[/p]</data>
+<data name="text_muestras_a2">[p]HALL DEL AUDITORIO[/p]</data>
+<data name="text_muestras_a3">[p]TERRAZA DEL AUDITORIO[/p]</data>
+<data name="text_muestras_a4">[p]HALL DE INGRESO[/p]</data>
+<data name="text_muestras_a5">[p]FRONTIS SALAVERRY[/p]</data>
+<data name="text_muestras_a6">[p]PLAZUELA 1[/p]</data>
+<data name="text_muestras_a7">[p]PLAZUELA 2[/p]</data>
+
+<data name="text_muestras_c1">[p]CENTRO DE INFORMACI&#xd3;N[/p]</data>
+
+<data name="text_muestras_d1">[p]CAFETER&#xcd;A[/p]</data>
+
+<data name="text_muestras_e1">[p]TERRAZA[/p]</data>
+<data name="text_muestras_e2">[p]AULA COM&#xda;N[/p]</data>
+<data name="text_muestras_e3">[p]AULA[/p]</data>
+<data name="text_muestras_e4">[p]&#xc1;REA LIBRE[/p]</data>
+
+<data name="text_muestras_f1">[p]LABORATORIO MAC[/p]</data>
+
+<data name="text_muestras_g1">[p]SALA BLOOMBERG[/p]</data>
+<data name="text_muestras_g2">[p]SALA DE TUTOR&#xcd;A[/p]</data>
+
+<data name="text_muestras_ci1">[p]SAL&#xd3;N DE C&#xd3;MPUTO[/p]</data>
+<data name="text_muestras_ci2">[p]SALA DE LECTURA[/p]</data>
+<data name="text_muestras_ci3">[p]CUB&#xcd;CULOS[/p]</data>
+
+<action name="show_buttons_on">
+show_alpha(barra_inferior);
+tween(layer[barra_inferior].y,0,0.1);
+set(layer[barra_inferior].visible,true);
+set(textstyle[text_buttons].yoffset,180),
+
+</action>
+<action name="hide_buttons_on">
+hide_alpha(barra_inferior);
+tween(layer[barra_inferior].y,-100,0.1);
+set(layer[barra_inferior].visible,false);
+set(textstyle[text_buttons].yoffset,80);
+</action>
+
+
+ 	<krpano devices="mobile|tablet|iPad|iphone">
+		<layer name="img_info" url="filespano/img_info_iphone.jpg"/>
+		
+<!-- Mostrar y ocultar barra inferior -->
+<layer name="hide_buttons"  url="filespano/scroll_down.png" align="bottomleft" edge="bottomleft" scale="0.8" visible="true" zorder="2" alpha="0.8" onclick="action(hide_buttons_on);" keep="true" y="105" x="10" />
+
+<action name="hide_buttons_on">
+	tween(style[info_bloques].y,-300,0.5);
+	tween(layer[buttons].y,5,0.5);
+	tween(layer[barra_inferior].y,-100,0.5);
+
+	tween(layer[info_bloque_a].y,-100,0.5);
+	tween(layer[info_bloque_b].y,-100,0.5);
+	tween(layer[info_bloque_c].y,-100,0.5);
+	tween(layer[info_bloque_ci].y,-100,0.5);
+	tween(layer[info_bloque_d].y,-100,0.5);
+	tween(layer[info_bloque_e].y,-100,0.5);
+	tween(layer[info_bloque_f].y,-100,0.5);
+	tween(layer[info_bloque_g].y,-100,0.5);
+	
+	tween(layer[muestras_a].y,-100,0.5);	
+	tween(layer[muestras_b].y,-100,0.5);	
+	tween(layer[muestras_c].y,-100,0.5);	
+	tween(layer[muestras_ci].y,-100,0.5);	
+	tween(layer[muestras_d].y,-100,0.5);	
+	tween(layer[muestras_e].y,-100,0.5);	
+	tween(layer[muestras_f].y,-100,0.5);	
+	tween(layer[muestras_g].y,-100,0.5);
+	
+	set(textstyle[text_buttons].yoffset,55);
+	set(layer[hide_buttons].visible,false);
+	set(layer[show_buttons].visible,true);
+</action>
+
+<layer name="show_buttons"  url="filespano/scroll_up.png" visible="false" align="bottomleft" edge="bottomleft" scale="0.8" zorder="2" alpha="0.8" onclick="action(show_buttons_on);" keep="true" y="5" x="10" />
+
+<action name="show_buttons_on">
+	tween(style[info_bloques].y,13,0.5);
+	tween(layer[buttons].y,105,0.5);
+	tween(layer[barra_inferior].y,0,0.5);
+	tween(layer[info_bloque_a].y,13,0.5);
+	tween(layer[info_bloque_b].y,13,0.5);
+	tween(layer[info_bloque_c].y,13,0.5);
+	tween(layer[info_bloque_ci].y,13,0.5);
+	tween(layer[info_bloque_d].y,13,0.5);
+	tween(layer[info_bloque_e].y,13,0.5);
+	tween(layer[info_bloque_f].y,13,0.5);
+	tween(layer[info_bloque_g].y,13,0.5);
+	
+	tween(layer[muestras_a].y,5,0.5);	
+	tween(layer[muestras_b].y,5,0.5);	
+	tween(layer[muestras_c].y,5,0.5);	
+	tween(layer[muestras_ci].y,5,0.5);	
+	tween(layer[muestras_d].y,5,0.5);	
+	tween(layer[muestras_e].y,5,0.5);	
+	tween(layer[muestras_f].y,5,0.5);	
+	tween(layer[muestras_g].y,5,0.5);			
+			
+	set(textstyle[text_buttons].yoffset,155);
+	set(layer[hide_buttons].visible,true);
+	set(layer[show_buttons].visible,false);
+</action>
+
+<!-- Fin Mostrar y ocultar barra inferior -->
+
+		</krpano>
+ 
+<!-- Styles -->
+<textstyle name="stylealt_muestras" font="Arial Narrow" fontsize="18" background="false" backgroundcolor="0x111111" border="false" bordercolor="0x111111" alpha="0.8" textcolor="0xFFFFFF" origin="leftbottom" edge="leftbottom" textalign="left" xoffset="15" yoffset="105" />
+<textstyle name="stylealt_mapas" font="Arial Narrow" fontsize="12" background="true" backgroundcolor="0x111111" border="true" bordercolor="0x111111" alpha="0.8" textcolor="0xFFFFFF"  origin="cursor" edge="centerbottom" textalign="left" xoffset="0" yoffset="-25" effect="glow(0x000000,1,16,4);" />
+<textstyle name="stylealt_puntos" font="Arial Narrow" fontsize="15" background="true" backgroundcolor="0x111111" border="false" bordercolor="0x111111" alpha="0.8" textcolor="0xFFFFFF"  origin="cursor" edge="centerbottom" textalign="center" xoffset="0" yoffset="-30" effect="glow(0x000000,1,16,4);" />	
+<textstyle name="text_buttons" font="Arial Narrow" fontsize="20" background="false" backgroundcolor="0x111111" border="false" bordercolor="0x5f4c3f" alpha="0.9" textcolor="0xFFFFFF" effect="glow(0x000000,0.7,8,2);dropshadow(2,45,0x000000,4,2);" origin="centerbottom" edge="centerbottom" textalign="center" xoffset="0" yoffset="155" />	
+
+<style name="buttons" onover="set(blendmode,add);" onout="set(blendmode,normal);"/>
+
+<style name="names" visible="true" handcursor="false" align="righttop" x="5" y="5" zorder="3" enabled="true"/>
+<style name="names_titulo" visible="true" handcursor="false" align="lefttop"  x="5" y="5"  zorder="2" keep="true" />	
+
+<style name="names_html" url="filespano/textfield.swf" css="text-align:right; color:#000000; font-family:Verdana; font-weight:bold; font-size:19px; letter-spacing:1" width="500" height="37"  background="false" textshadow="0.01" textshadowrange="20.0" textshadowangle="45" textshadowcolor="0xFFFFFF" textshadowalpha="1.0" align="righttop" x="300" y="0" zorder="5" handcursor="false"/>
+	
+<!-- Fin Styles -->
+
+<!-- Acciones -->
+<action name="info_on">
+tween(layer[img_info].alpha,0.95,0.5);
+set(layer[img_info].enabled,true);
+set(layer[img_info_close].enabled,true);
+mapa_1_off();
+mapa_2_off();
+mapa_3_off();
+action(cerrar_derecha);
+
+set(layer[info].onclick,info_off();tween(layer[fondo_trama].alpha,0,0.5););
+set(layer[img_info].onclick,info_off();tween(layer[fondo_trama].alpha,0,0.5););
+set(layer[img_info_close].onclick,info_off();tween(layer[fondo_trama].alpha,0,0.5););
+</action>
+
+<action name="info_off">
+tween(layer[img_info].alpha,0,0.5);
+set(layer[img_info].enabled,false);
+set(layer[img_info_close].enabled,false);
+
+set(layer[info].onclick,info_on());
+
+set(autorotator.enabled,true);
+
+</action>
+
+<action name="inicio">
+	set(view.fovmin,28);
+	loadscene(escena1, null, MERGE, BLEND(2));
+	lookat(-90,0, 50);
+	wait(LOAD);
+	action(musica_1_on);
+	oninterrupt(break);
+	wait(BLEND);
+	lookto(102, -4, 70, smooth(45,45,60), false);
+</action>
+
+<action name="toggleplanet">
+	if(islittleplanet == false,
+	set(islittleplanet,true);
+	set(display.flash10,off);
+	set(view.stereographic,true);
+	tween(view.hlookat, 0.0, 1.0);
+	tween(view.fisheye, 1.0, 1.0);
+	tween(view.vlookat, 90.0, 1.0);
+	tween(view.fov, 150.0, 1.0);
+	,
+	set(islittleplanet, false);
+	tween(view.fisheye, 0.0, 1.0, default, set(display.flash10,on));
+	tween(view.hlookat, 102, 1.0);
+	tween(view.vlookat, -4.0, 1.0);
+	tween(view.fov, 70.0, 1.0);
+	  );
+</action>
+	
+<action name="skin_onresize">
+	ifnot(device.mobile, if(stagewidth LT 390, set(layer[buttons].visible,false), set(layer[buttons].visible,true)););  
+	ifnot(device.mobile, if(stagewidth LT 800, set(layer[logo_pt].visible,false), set(layer[logo_pt].visible,true)););		
+</action>	
+
+<action name="mapas_off">
+	mapa_1_off();mapa_2_off();mapa_3_off();
+	tween(layer[fondo_trama].alpha,0,0.5);	
+</action>		
+
+<action name="eventos_key_down">
+	
+	if(keycode == 107, set(fov_moveforce,-0.3));
+	if(keycode == 109, set(fov_moveforce,+0.3));	
+	
+	if(keycode == 16, set(fov_moveforce,-0.3));
+	if(keycode == 17, set(fov_moveforce,+0.3));
+	
+	if (keycode == 49, if(layer[mapa_1_edificio].enabled == false,action(mapa_1_on);,action(mapa_1_off);action(hide_buttons_on);));		
+	if (keycode == 50, if(layer[mapa_2_campus].enabled == false,action(mapa_2_on);,action(mapa_2_off);action(hide_buttons_on);tween(layer[fondo_trama].alpha,0,0.5);));	
+
+	if (keycode == 97, if(layer[mapa_1_edificio].enabled == false,action(mapa_1_on);,action(mapa_1_off);action(hide_buttons_on);));	
+	if (keycode == 98, if(layer[mapa_2_campus].enabled == false,action(mapa_2_on);,action(mapa_2_off);action(hide_buttons_on);tween(layer[fondo_trama].alpha,0,0.5);));		
+
+	if (keycode == 32, switch(autorotate.enabled););
+	if (keycode == 70, if(layer[openfs].visible == true,set(fullscreen,true);));
+		
+</action>	
+
+<action name="eventos_key_up">
+	if(keycode == 107, set(fov_moveforce,0));
+	if(keycode == 109, set(fov_moveforce,0));	
+	if(keycode == 16, set(fov_moveforce,0));
+	if(keycode == 17, set(fov_moveforce,0));
+</action>	
+
+<action name="acciones_eternas">
+
+if(layer[mapa_1_edificio].enabled == true,
+set(layer[buttons].visible,false);,
+	if(layer[mapa_2_campus].enabled == true,
+	set(layer[buttons].visible,false);,
+		if(layer[mapa_3_servicios].enabled == true,
+		set(layer[buttons].visible,false);,
+					if(layer[img_info].enabled == true,
+					set(layer[buttons].visible,false);,
+					set(layer[buttons].visible,true);
+					);
+		);
+	);
+);
+
+	if(device.flash, 
+	add(posicion_buttons_new,get(layer[barra_inferior].y),136);,
+	add(posicion_buttons_new,get(layer[barra_inferior].y),110); 
+	);
+	
+tween(layer[buttons].y,get(posicion_buttons_new),0.1);
+
+add(posicion_derecha,get(layer[barra_derecha].x),109);
+sub(layer[barra_inferior].width,get(stagewidth),get(posicion_derecha));
+
+delayedcall(0.001, if(loaded, acciones_eternas()));	
+
+</action>
+
+<!-- Acciones Fin -->
+
+</krpano>
