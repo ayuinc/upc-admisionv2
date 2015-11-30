@@ -86,6 +86,7 @@ header li a:focus {
   width:29;
   margin-left:10;
 }
+
 .button.open:before, .button.open:after{
   width:25px;
   margin-left:-10px;
@@ -373,15 +374,17 @@ header li a:focus {
 	width: 100%;
 	background-size: cover;
 	background-position: center;
+      height: 768px;
 }
 .bg-opacity {
 	background-color: rgba(0,0,0,0.9);
+      height: 768px;
 }
 .facult{
 	color: #fff;
   margin-left: 5%;
   font-family: 'sgothic-bdcap';
-  margin-bottom: 8%;
+  margin-bottom: 4%;
 }
 .bg-w{
   background: #fff;
@@ -411,9 +414,10 @@ padding: 4% 1% 0% 5%;
  font-family: 'zizou-slab-regular';
 }
 .content-wrap h4{
-	font-size: 14px;
-	color: #3C97FF;
+	font-size: 16px;
+  color: #3C97FF;
   font-family: 'zizou-slab-regular';
+  line-height: 1.2;
 
 }
 .content-wrap h3{
@@ -430,11 +434,15 @@ padding: 4% 1% 0% 5%;
 	color: #3C97FF;
 }
 .content-wrap hr{
-    width: 11%;
+    width: 6%;
     border: solid 1px #0170B5;
     margin-left: 2%;
     margin-top: 0%;
-    margin-bottom: 0%;
+    margin-bottom: 1%;
+}
+
+.minh-246 {
+  height: 246px;
 }
 
 .tabs-style-circle nav li a  .administracion {
@@ -677,3 +685,9 @@ padding: 4% 1% 0% 5%;
   
 }
 
+.mb-21 {
+  margin-bottom: 21px !important;
+}
+.mt-7 {
+  margin-bottom: 21px !important;
+}

@@ -399,7 +399,10 @@ padding: 4% 1% 0% 5%;
     padding-bottom: 6%;
 }
 .pt-8{
-  padding-top: 6%;
+  padding-top: 2%;
+}
+.mbp-4 {
+  margin-bottom: 4%;
 }
 
 .tabs h5{
@@ -621,4 +624,8 @@ padding: 4% 1% 0% 5%;
 
 .mv-contain {
   margin: 128px 0px;
+}
+
+.tab-ml {
+  margin-left: 16px;
 }

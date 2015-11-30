@@ -97,6 +97,8 @@ header li a:focus {
   transform:translate(0, 0) rotate(0deg);
 }
 
+
+
 /*seccion carreras*/
  .carreras{
  	background-color: #e52323;
@@ -104,6 +106,19 @@ header li a:focus {
  	text-align: center;
  	padding: 58px 32px 9%;
  }
+
+.titulo-videos {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 42px;
+  margin: 0;
+  font-family: 'sgothic-bdcap';
+  color: white;
+  margin-top: 6%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+}
+
 .carreras h2{
  	text-transform: uppercase;
  	text-align: left;
@@ -222,11 +237,26 @@ header li a:focus {
   /*margin: 5% 7%;*/
 }
 
+.bg-black {
+  background-color: black; 
+}
+
+.minh-768 {
+  height: 768px;
+}
+
+.ml-21 {
+  margin-left: 21px;
+}
+
+.pt-135 {
+  padding-top: 135px;
+}
+
 .pull-right {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
-  border-right: 5px solid #eee;
   border-left: 0;
 }
 section{
@@ -234,6 +264,107 @@ section{
   width: 100%;
 }
 
+/*LIST IMAGES HOME*/
+
+.porque-upc {
+  background-image: url('../img/iconos-menu-03.png');
+  height: 107px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.porque-upc:active {
+  background-image: url('../img/admision5_03.png');
+  height: 107px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.carreras-icon {
+  background-image: url('../img/admision5_05.png');
+  height: 109px;
+  width: 109px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.carreras-icon:active {
+  background-image: url('../img/iconos-menu-05.png');
+  height: 109px;
+  width: 109px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.nuestro-campus-icon {
+  background-image: url('../img/iconos-menu-07.png');
+  height: 107px;
+  width: 109px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.nuestro-campus-icon:active {
+  background-image: url('../img/admision5_07.png');
+  height: 109px;
+  width: 109px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.videos-icon-home {
+  background-image: url('../img/iconos-menu-09.png');
+  height: 108px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.videos-icon-home:active {
+  background-image: url('../img/admision5_09.png');
+  height: 108px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.inscripcion-icon {
+  background-image: url('../img/iconos-menu-11.png');
+  height: 108px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.inscripcion-icon:active {
+  background-image: url('../img/admision5_11.png');
+  height: 108px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
 
 /* Default tab style */
 
@@ -378,6 +509,10 @@ section{
   max-width: 1200px;
 }
 
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
 .content-wrap section.content-current {
   display: block;
 }
@@ -387,6 +522,7 @@ section{
   font-weight: 500;
   font-size: 14px;
   color: #3E3D3F;
+  line-height: 1.8;
 }
 .background h3{
   color: #E42322;
@@ -644,12 +780,20 @@ section{
   font-family: 'zizou-slab-regular';
 }
 
+.mt-14 {
+  margin-top: 14px;
+}
+
+.mt-21 {
+  margin-top: 21px;
+}
+
 .text-black {
   color: black !important;
 }
 
 .opacity .content-wrap section {
-  height: 248px;
+  height: 290px;
 }
 
 .text-sub {
@@ -706,14 +850,293 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .textura{
   background-color: rgba(255, 255, 255,0.5);
 }
-.iconos{
-  display: inline-block;
-  margin-left: 6%;
-}
+
 .iconos p{
-  text-align: center;
   font-family: 'zizou-slab-regular';
-  font-size: 17px;
-  display: inline-block;
+  font-size: 15px;
   font-weight: 700;
+}
+
+/*VIDEOS*/
+
+.pull-left {
+  float: left !important;
+}
+
+.minw-130 {
+  width: 130px;
+}
+
+.text-videos {
+  color: #fff;
+  text-decoration: none;
+ font-family: 'zizou-slab-regular';
+}
+
+.videos-bg {
+  background-image: url('../img/bg-videos.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 770px;
+}
+
+.hoteleria-icon {
+  background-image: url('../img/iconos-verdes_10.png');
+  height: 107px;
+  width: 107px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.hoteleria-icon:active {
+  background-image: url('../img/color/admision5_15.png');
+  height: 107px;
+  width: 108px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.arquitectura-icon {
+  background-image: url('../img/iconos-verdes_19.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.arquitectura-icon:active {
+  background-image: url('../img/color/admision5_17.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.artes-icon {
+  background-image: url('../img/iconos-verdes_musica.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.artes-icon:active {
+  background-image: url('../img/color/admision5_10.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.ciencias-salud-icon {
+  background-image: url('../img/iconos-verdes_12.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.ciencias-salud-icon:active {
+  background-image: url('../img/color/admision5_12.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.humanas-icon {
+  background-image: url('../img/iconos-verdes_14.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.humanas-icon:active {
+  background-image: url('../img/color/admision5_20.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.comunicaciones-icon {
+  background-image: url('../img/iconos-verdes_22.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.comunicaciones-icon:active {
+  background-image: url('../img/color/admision5_14.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.derecho-icon {
+  background-image: url('../img/iconos-verdes_25.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.derecho-icon:active {
+  background-image: url('../img/color/admision5_25.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.disenio-icon {
+  background-image: url('../img/iconos-verdes_34.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.disenio-icon:active {
+  background-image: url('../img/color/admision5_35.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.economia-icon {
+  background-image: url('../img/iconos-verdes_34.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.economia-icon:active {
+  background-image: url('../img/color/admision5_35.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.educacion-icon {
+  background-image: url('../img/iconos-verdes_38.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.educacion-icon:active {
+  background-image: url('../img/color/admision5_40.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.ingenieria-icon {
+  background-image: url('../img/iconos-verdes_40.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.ingenieria-icon:active {
+  background-image: url('../img/color/admision5_35-11.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.negocios-icon {
+  background-image: url('../img/iconos-verdes_42.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.negocios-icon:active {
+  background-image: url('../img/color/admision5_45.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.psicologia-icon {
+  background-image: url('../img/iconos-verdes_45.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+}
+
+.psicologia-icon:active {
+  background-image: url('../img/color/admision5_47.png');
+  height: 107px;
+  width: 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
 }
