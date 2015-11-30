@@ -1144,9 +1144,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 #container { 
   overflow: auto;
   -webkit-overflow-scrolling: touch; 
-  height: 500px; 
+  height: 724px; 
 }
 
 object { 
-  width: 1024px; 
+  width: 1536px;
+  height: 1350px;
 }
