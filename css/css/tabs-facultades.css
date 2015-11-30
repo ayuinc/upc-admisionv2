@@ -33,8 +33,8 @@ header a:hover ,header a:focus{
 }
 header ul, li, li a {
   list-style: none;
-  display: block;
-  margin: 0;
+/*  display: block;
+*/  margin: 0;
   padding: 0;
 }
 header li a {
@@ -394,7 +394,7 @@ header li a:focus {
 	height: 30px;
 }
 .pd-2{
-padding: 4% 1% 0% 5%;
+padding: 3% 1% 0% 5%;
 }
 .mv-38 {
   margin: 38px 0px !important;
@@ -414,10 +414,10 @@ padding: 4% 1% 0% 5%;
  font-family: 'zizou-slab-regular';
 }
 .content-wrap h4{
-	font-size: 16px;
+	font-size: 20px;
   color: #3C97FF;
   font-family: 'zizou-slab-regular';
-  line-height: 1.2;
+  line-height: 1.8;
 
 }
 .content-wrap h3{
@@ -425,6 +425,7 @@ padding: 4% 1% 0% 5%;
     margin-bottom: 0%;
     color: #0170B5;
     font-family: 'sgothic-bdcap';
+    font-size: 30px !important;
 }
 .content-wrap h3 span{
     font-family: 'zizou-slab-bold';
@@ -442,8 +443,10 @@ padding: 4% 1% 0% 5%;
 }
 
 .minh-246 {
-  height: 246px;
+  height: 313px;
 }
+
+
 
 .tabs-style-circle nav li a  .administracion {
 	background-image: url("../img/hover/admision5_15.png");
@@ -690,4 +693,8 @@ padding: 4% 1% 0% 5%;
 }
 .mt-7 {
   margin-bottom: 21px !important;
+}
+
+.facultades-list .minh-246 ul li {
+  list-style-image: url('../img/eyes.png');
 }
