@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UPC | Admisión</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">	
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../fonts/fuentes.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+
+
+</head>
+<body>
+	<header>
+		<a href="#menu" id="toggle" class="menu-btn">
+			<div class="button-wrap">
+				<div class="button"></div>
+			</div>
+			<span class="span-menu">Menú</span></a>
+			<div id="menu" style="width: 196px;">
+				<ul>
+					<li><a href="../index.html">Inicio</a></li>
+					<li><a href="../porque-upc.html">Por qué UPC</a></li>
+					<li><a href="../carreras.html">Carreras</a></li>
+					<li><a href="../campus.html">Nuestros Campus</a></li>
+					<li><a href="../videos.html">Videos</a></li>
+					<li><a href="../inscripcion.html">Inscripción</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<section class="pt-135 minh-768 bg-black">
+			<div class="container-fluid" id="videoContainer">
+			
+			</div>
+		</section>
+
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/main.js"></script>
+
+
+<script>
+
+	$(document).ready( function () {
+		var videos = [
+			{ "video" : "Turismo.mp4"},
+			{ "video" : "Arquitectura.mp4"},
+			{ "video" : "Musica.mp4"},
+			{ "video" : "Medicina.mp4"},
+			{ "video" : "Comunicaciones.mp4"},
+			{ "video" : "Diseno.mp4"},
+			{ "video" : "Economia.mp4"},
+			{ "video" : "Educacion.mp4"},
+			{ "video" : "Ingenieria.mp4"},
+			{ "video" : "Negocios.mp4"},
+		];
+		var queryString = (window.location.href).substr((window.location.href).indexOf('?') + 1); 
+    var value = (queryString.split('='))[1];
+    value = decodeURIComponent(value);
+
+    if (value >= 0 && videos.length>0) {
+    	// $("#videoSource").attr("src", "../videos/"+videos[value].video);
+    	// $("#videoSource").load();
+
+    	var elvideo = '<video width="100%" style="" controls><source id="videoSource" src="../videos/'+videos[value].video+'" type="video/mp4"><source src="mov_bbb.ogg" type="video/ogg">Your browser does not support HTML5 video.</video>';
+			$("#videoContainer").html(elvideo);
+		$("video").get(0).play()
+    }
+
+
+	});
+</script>
+
+
+	</body>
+	</html>
