@@ -39,8 +39,10 @@
 		<script src="../js/main.js"></script>
 		<script src="../js/pdf.js"></script>
 		 <script src="../js/modernizr.custom.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 		 <script>
+$(document).ready(function() {
 var currPage = 1; //Pages are 1-based not 0-based
 var numPages = 0;
 var thePDF = null;
@@ -85,7 +87,7 @@ function handlePages(page)
         thePDF.getPage( currPage ).then( handlePages );
     }
 }
-
+});
 		 </script>
 	</body>
 	</html>
