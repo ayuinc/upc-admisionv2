@@ -31,10 +31,10 @@ header a:hover ,header a:focus{
   visibility: hidden;
   transition: opacity .4s;
 }
-header ul, li, li a {
+header ul, header li, header li a {
   list-style: none;
-/*  display: block;
-*/  margin: 0;
+  display: block;
+  margin: 0;
   padding: 0;
 }
 header li a {
@@ -234,7 +234,7 @@ header li a:focus {
 .content-wrap section {
   display: none;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1em 1em 5px 1em;
   max-width: 1200px;
   
 }
@@ -417,7 +417,7 @@ padding: 3% 1% 0% 5%;
 	font-size: 20px;
   color: #3C97FF;
   font-family: 'zizou-slab-regular';
-  line-height: 1.8;
+  line-height: 1.6;
 
 }
 .content-wrap h3{
@@ -443,7 +443,7 @@ padding: 3% 1% 0% 5%;
 }
 
 .minh-246 {
-  height: 313px;
+  height: 298px;
 }
 
 

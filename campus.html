@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="fonts/fuentes.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body ontouchstart>
 	<header>
 		<a href="#menu" id="toggle" class="menu-btn">
 			<div class="button-wrap">
@@ -37,7 +37,7 @@
 						
 						<a href="san_isidro/upc_san_isidro.html"><img src="img/san-isidro.jpg" alt="" class="left "></a>
 						<a href="monterrico/upc_monterrico.html"><img src="img/DSC_8335.jpg" alt="" class="right "></a>
-						<a href=""><img src="img/san-miguel.jpg" alt="" class="bleft"></a>
+						<a href="vistas/campus-sanmiguel.html"><img src="img/san-miguel.jpg" alt="" class="bleft"></a>
 						<a href="villa/upc_villa.html"><img src="img/DSC_7868.jpg" alt="" class="bright "></a>
 
 						<p class="sanisidro">San Isidro</p>
@@ -52,6 +52,9 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+		 	$('body *').on('touchstart', function (){});
+		 </script>
 
 	</body>
 	</html>

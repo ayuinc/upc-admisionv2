@@ -37,35 +37,35 @@
 						<div class="tabs tabs-style-circle mv-contain">
 						<div class="row pd-2 pt-8 mbp-4">
 							<nav>
-								<ul>
+								<ul class="epe-carreras">
 								<li>
-										<a href="">
+										<a href="" class="view-pdf" data-carrera-id="1">
 											<div class="banca tab-ml"></div>
-											<h5>Administración en <br> Hoteleria y Turismo</h5>
+											<h5 >Administración  <br>de Banca y Finanzas</h5>
 										</a>
 									</li>
 									<li>
-										<a href="#section-circle-1">
+										<a href="" class="view-pdf" data-carrera-id="2">
 											<div class="empresa tab-ml"></div>
-											<h5>Administración en <br> Hoteleria y Turismo</h5>
+											<h5 >Administración <br> de Empresas</h5>
 										</a>
 									</li>
 									<li>
-										<a href="#section-circle-2">
+										<a href="" class="view-pdf" data-carrera-id="3">
 											<div class="gerencia tab-ml"></div>
-											<h5>Arquitectura </h5>
+											<h5>Administración<br> y Gerencia del <br>Emprendimiento</h5>
 										</a>
 									</li>
 									<li>
-										<a href="#section-circle-3">
+										<a href="" class="view-pdf" data-carrera-id="4">
 										  <div class="contab tab-ml"></div>
-										  <h5>Artes <br> Contemporánias</h5>
+										  <h5>Contabilidad</h5>
 									  </a>
 								  </li>
 									<li>
-										<a href="#section-circle-3">
+										<a href="" class="view-pdf" data-carrera-id="5">
 										  <div class="civil tab-ml"></div>
-										  <h5>Artes <br> Contemporánias</h5>
+										  <h5>Ingeniería Civil</h5>
 									  </a>
 								  </li>
 									
@@ -77,40 +77,40 @@
            	<nav>
 								<ul>
 								 <li>
-										<a href="#section-circle-4">
+										<a href="" class="view-pdf" data-carrera-id="6">
 										  <div class="industrial tab-ml"></div>
-										  <h5>Ciencias <br> de la Salud</h5>
+										  <h5>Ingeniería Industrial</h5>
 									  </a>
 								  </li>
 									<li>
-										<a href="#section-circle-5">
+										<a href="" class="view-pdf" data-carrera-id="7">
 										  <div class="redes tab-ml"></div>
-										  <h5>Ciencias <br> Humanas</h5>
+										  <h5>Ingeniería de Redes<br> y Comunicaciones</h5>
 									  </a>
 								  </li>
 
 								    <li>
-										<a href="#section-circle-6">
+										<a href="" class="view-pdf" data-carrera-id="8">
 										  <div class="sistemas tab-ml"></div>
-										  <h5>Comunicaciones</h5>
+										  <h5>Ingeniería <br>de Sistemas</h5>
 									  </a>
 								  </li>
 									<li>
-										<a href="#section-circle-7">
+										<a href="" class="view-pdf" data-carrera-id="9">
 										  <div class="marketing tab-ml"></div>
-										  <h5>Derecho</h5>
+										  <h5>Marketing</h5>
 									  </a>
 								  </li>
 								  <li>
-										<a href="#section-circle-7">
+										<a href="" class="view-pdf" data-carrera-id="10">
 										  <div class="nnim tab-ml"></div>
-										  <h5>Derecho</h5>
+										  <h5>Negocios<br> Internacionales</h5>
 									  </a>
 								  </li>
 						    </ul>
 				     	</nav>
            </div>
-					  <div class="content-wrap">
+					  <div class="content-wrap hidden">
 							<section id="section-circle-1 "></section>
 							<section id="section-circle-2 "></section>
 							<section id="section-circle-3 "></section>
@@ -137,8 +137,15 @@
 				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
 					new CBPFWTabs( el );
 				});
+				$(".view-pdf").on('click', function(e) {
+					e.preventDefault();
+					var pdf_id = $(this).attr("data-carrera-id");
+
+					window.location =  'vistas/vista-pdfs.html?epe_id=' + pdf_id;
+				});
 
 			})();
+		</script>
 		</script>
     <script src="js/modernizr.custom.js"></script>
 </html>
