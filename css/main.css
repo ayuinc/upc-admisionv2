@@ -147,6 +147,7 @@ header li a:focus {
   font-family: 'zizou-slab-regular';
   font-weight: 900;
   padding-top: 7px;
+  letter-spacing: 1px;
   margin-bottom: 84px;
  }
 
@@ -274,6 +275,10 @@ header li a:focus {
 
 .p-0 {
   padding: 0px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
 }
 
 .pull-right {
@@ -1172,7 +1177,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 #container iframe{ 
   border: 0;
-  width: 100%;
+  width: 2200px;
   /*height: 1550px;*/
   overflow-x: scroll; 
   overflow-y: scroll;
