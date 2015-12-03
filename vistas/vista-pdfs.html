@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UPC | Admisión</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">	
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../fonts/fuentes.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+	<header>
+		<a href="#menu" id="toggle" class="menu-btn">
+			<div class="button-wrap">
+				<div class="button"></div>
+			</div>
+			<span class="span-menu">Menú</span></a>
+			<div id="menu" style="width: 196px;">
+				<ul>
+					<li><a href="../index.html">Inicio</a></li>
+					<li><a href="../porque-upc.html">Por qué UPC</a></li>
+					<li><a href="../carreras.html">Carreras</a></li>
+					<li><a href="../campus.html">Nuestros Campus</a></li>
+					<li><a href="../videos.html">Videos</a></li>
+					<li><a href="../inscripcion.html">Inscripción</a></li>
+				</ul>
+			</div>
+		</header>
+		
+		<div id="container">
+			<iframe id="pdf-container" width="100%" height="100%" src="../pdf/default.pdf"></iframe >
+		</div>
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/pdf.js"></script>
+	<script src="../js/modernizr.custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script type="text/javascript">
+
+		var facultades = [
+			'admhoteleria',
+			'arquitectura',
+			'arte',
+			'cienciasdesalud',
+			'cienciashumanas',
+			'comunicaciones',
+			'derecho',
+			'disenio',
+			'economia',
+			'educacion',
+			'ingenieria',
+			'negocios',
+			'psicologia',
+		];
+		var carreras = [
+				'hoteleria-administ',//1
+				'turismo-y-administracion',
+				'gastronomia_v',
+				'arquitectura',
+				'escuelamusica',
+				'medicina',
+				'nutricion-dietetica',
+				'odontologia',
+				'terapia-fisica',
+				'traduccion-e-interpretacion-profesional',//10
+				'ComunMediosAudio',
+				'ComunicImagenempre',
+				'ComunicMKT',
+				'Comunperiodismo',
+				'ComunicaPublic',
+				'Derecho',
+				'Disenointerior',
+				'DisenoGrafico',
+				'DisenoGestionModa',
+				'EconomiaFinanzas', //20
+				'EconomiaNNII',
+				'EconomiaGerencial',
+				'EducaionGest',
+				'CienciasComputacion',
+				'IngCivil',
+				'IngSoftware',
+				'IngGestMinera',
+				'IngSistemInform',
+				'IngGestEmpres',
+				'IngElectronica',
+				'IngIndustrial',
+				'IngMecatronica',
+				'AdministAgronegocios',
+				'AdministFinanzas',
+				'AdministMKT',
+				'NNII',
+				'AdministRRHH',
+				'AdministNegDeporte',
+				'ContabAdministracion',
+				'Psicologia'
+			];
+		
+			var epe = [
+				'EPEADMBANCAFINANZAS',
+				'EPEADMEMPRESAS',
+				'EPEADMGERENCIAEMPRENDIMIENTO',
+				'EPECONTABILIDAD',
+				'EPEINGCIVIL',
+				'EPEINGINDUSTRIAL',
+				'EPEINGREDESCOMUN',
+				'EPEINGENIERIASISTEMAS',
+				'EPEMARKETING',
+				'EPENEGOCIOSINTERNACIONALES'
+			];
+		 function getUrlParameter(sParam) {
+		    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+		        sURLVariables = sPageURL.split('&'),
+		        sParameterName,
+		        i;
+
+		    for (i = 0; i < sURLVariables.length; i++) {
+		        sParameterName = sURLVariables[i].split('=');
+
+		        if (sParameterName[0] === sParam) {
+		            return sParameterName[1] === undefined ? true : sParameterName[1];
+		        }
+		    }
+		}
+
+		$(function() {
+			var pdf_id = getUrlParameter('pdf_id') - 1;
+			var facultad = getUrlParameter('fact') - 1;
+			var epe_id = getUrlParameter('epe_id') - 1;
+			var objs = [];
+			if (epe_id!=="" && epe_id!==undefined && !isNaN(epe_id)){
+				var url = '../pdf/'+epe[epe_id]+'.pdf';
+				$("#pdf-container").attr("src", url);
+				PDFJS.getDocument(url).then(function(pdf) {
+			        numPages = pdf.numPages;
+			        $("#pdf-container").css('height', (775*numPages)+'px');
+			    });
+			}else if(facultad!=='' && facultad!==undefined && !isNaN(facultad) && pdf_id!=='' && pdf_id!==undefined && !isNaN(pdf_id))
+			{
+				var url = '../pdf/'+facultades[facultad]+'/'+carreras[pdf_id]+'.pdf';
+				$("#pdf-container").attr("src", url);
+				PDFJS.getDocument(url).then(function(pdf) {
+			        numPages = pdf.numPages;
+			        $("#pdf-container").css('height', (775*numPages)+'px');
+			    });
+			}
+			
+		});
+	</script>
+</body>
+</html>

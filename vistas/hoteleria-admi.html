@@ -8,6 +8,14 @@
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../fonts/fuentes.css">
 	<link rel="stylesheet" href="../css/main.css">
+	<style type="text/css" media="screen">
+		body{
+			margin: 0;
+		}
+		iframe{
+			border: 0;
+		}
+	</style>
 
 </head>
 <body>
@@ -31,6 +39,9 @@
 		
 		<div id="container">
 			<!-- <object  data="../pdf/adm.hoteleria/hoteleria-administ.pdf" ></object> -->
+
+			<!-- <iframe width="100%" height="100%" src="../pdf/adm.hoteleria/hoteleria-administ.pdf">   -->
+			<iframe width="100%" height="100%" src="../pdf/arquitectura/arquitectura.pdf"></iframe >
 		</div>
 
 		<script src="../js/jquery.min.js"></script>
@@ -41,50 +52,108 @@
 
 		 <script>
 $(document).ready(function() {
-var currPage = 1; //Pages are 1-based not 0-based
-var numPages = 0;
-var thePDF = null;
 
-//This is where you start
-PDFJS.getDocument("../pdf/adm.hoteleria/hoteleria-administ.pdf").then(function(pdf) {
+	var facultades = [
+		{
+			'id' : 'admhoteleria',
+			'carreras': [
+				'hoteleria':'hoteleria-administ'
+			]
+		},
+		{
+			'id' : 'arquitectura',
+			'carreras': [
+				'arquitectura': 'arquitectura'
+			]
+		},
+		{
+			'id' : 'arte',
+			'carreras': [
+				'musica': 'escuelamusica',
+			]
+		},
+		{
+			'id' : 'cienciasdesalud',
+			'carreras': [
+				'medicina': 'medicina',
+				'nutricion' : 'nutricio-dietetica',
+				'odontologia' : 'odontologia',
+				'terapia-fisica': 'terapia-fisica'
+			]
+		},
+		{
+			'id' : 'comunicaciones',
+			'carreras': [
+				'publicas': 'ComunicaPublic',
+				'empresarial' : 'ComunicImagenempre',
+				'marketing' : 'ComunicMKT',
+				'periodismo': 'Comunperiodismo'
+			]
+		},
+		{
+			'id' : 'derecho',
+			'carreras': [
+				'derecho': 'derecho'
+			]
+		},
+		{
+			'id' : 'disenio',
+			'carreras': [
+				'gestionmoda': 'DisenoGestionModa',
+				'grafico': 'DisenoGrafico',
+				'interior': 'Disenointerior'
+			]
+		},
+		{
+			'id' : 'economia',
+			'carreras': [
+				'finanzas': 'EconomiaFinanzas',
+				'genrencial': 'EconomiaGerencial',
+				'internacional': 'EconomiaNNII'
+			]
+		},
+		{
+			'id' : 'educacion',
+			'carreras': [
+				'educacion': 'EducaionGest',
+			]
+		},
+		{
+			'id' : 'ingenieria',
+			'carreras': [
+				'computacion': 'CienciasComputacion',
+				'civil': 'IngCivil',
+				'electronica': 'IngElectronica',
+				'empresas': 'IngGestEmpresas',
+				'minera' : 'IngGestMinera',
+				'industrial' : 'IngIndustrial',
+				'mecatronica' : 'IngMecatronica',
+				'sistemas':'IngSistemInform',
+				'software':'IngSoftware'
+			]
+		},		
+		{
+			'id' : 'negocios',
+			'carreras': [
+				'agronegocios': 'AdministAgronegocios',
+				'finanzas': 'AdministFinanzas',
+				'marketing': 'AdministMKT',
+				'deporte': 'AdministNegDeporte',
+				'recursoshumanos' : 'AdministRRHH',
+				'contabilidad' : 'ContabAdministracion',
+				'mecatronica' : 'IngMecatronica',
+				'internacional':'NNII',
+			]
+		},		
+		{
+			'id' : 'negocios',
+			'carreras': [
+				'piscologia': 'Psicologia'
+			]
+		}
+	];
+		
 
-        //Set PDFJS global object (so we can easily access in our page functions
-        thePDF = pdf;
-
-        //How many pages it has
-        numPages = pdf.numPages;
-
-        //Start with first page
-        pdf.getPage( 1 ).then( handlePages );
-});
-
-
-
-function handlePages(page)
-{
-    //This gives us the page's dimensions at full scale
-    var viewport = page.getViewport( 1 );
-
-    //We'll create a canvas for each page to draw it on
-    var canvas = document.createElement( "canvas" );
-    canvas.style.display = "block";
-    var context = canvas.getContext('2d');
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    //Draw it on the canvas
-    page.render({canvasContext: context, viewport: viewport});
-
-    //Add it to the web page
-    document.getElementById("container").appendChild( canvas );
-
-    //Move to next page
-    currPage++;
-    if ( thePDF !== null && currPage <= numPages )
-    {
-        thePDF.getPage( currPage ).then( handlePages );
-    }
-}
 });
 		 </script>
 	</body>
