@@ -1172,7 +1172,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 #container iframe{ 
   border: 0;
-  width: 2200px;
+  width: 100%;
   /*height: 1550px;*/
   overflow-x: scroll; 
   overflow-y: scroll;
